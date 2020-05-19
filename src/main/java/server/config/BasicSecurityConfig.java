@@ -8,14 +8,14 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import server.service.UserService;
+import server.service.UserServiceImpl;
 
 @Configuration
 public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private final UserService userService;
+    private final UserServiceImpl userService;
 
-    public BasicSecurityConfig(UserService userService) {
+    public BasicSecurityConfig(UserServiceImpl userService) {
         this.userService = userService;
     }
 

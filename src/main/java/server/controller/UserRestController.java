@@ -1,10 +1,9 @@
 package server.controller;
 
-import org.springframework.http.converter.json.GsonBuilderUtils;
 import server.model.Role;
 import server.model.User;
-import server.service.RoleService;
-import server.service.UserService;
+import server.service.RoleServiceImpl;
+import server.service.UserServiceImpl;
 import org.springframework.web.bind.annotation.*;
 import java.util.HashSet;
 import java.util.List;
@@ -13,10 +12,10 @@ import java.util.Set;
 @RestController
 public class UserRestController {
 
-    private UserService userService;
-    private RoleService roleService;
+    private UserServiceImpl userService;
+    private RoleServiceImpl roleService;
 
-    public UserRestController(UserService userService, RoleService roleService) {
+    public UserRestController(UserServiceImpl userService, RoleServiceImpl roleService) {
         this.userService = userService;
         this.roleService = roleService;
     }
